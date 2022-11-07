@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 import discord
 
-from quote import quotes
+from quotes.quotes import quotes
 
 load_dotenv()
 
