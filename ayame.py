@@ -2,6 +2,8 @@ from dotenv import load_dotenv
 import os
 import discord
 
+from quote import quotes
+
 load_dotenv()
 
 
@@ -18,15 +20,16 @@ def run_ayame():
 
     @client.event
     async def on_message(message):
+
         if message.author == client.user:
             return
 
-        if message.content.startswith("!ayame "):
-            pass
+        if message.channel.name == "ayame-quote":
+            await quotes(message)
 
     @client.event
     async def on_member_join(member):
-        channel = client.get_channel(1038808903061872692)
+        channel = client.get_channel(os.getenv("WELCOME_CHANNEL"))
         await channel.send(f"<@{member.id}> Konnakkiri!!")
 
     client.run(os.getenv("TOKEN"))
