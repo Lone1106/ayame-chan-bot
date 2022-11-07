@@ -7,7 +7,8 @@ async def quotes(message):
         try:
             query = requests.get(
                 "https://animechan.vercel.app/api/random").json()
-            response = f"{query['quote']} ({query['character']}, {query['anime']})"
+            anime, character, quote = query.values()
+            response = f"{quote} ({character}, {anime})"
             await message.channel.send(response)
         except Exception:
             await message.channel.send(
@@ -19,11 +20,12 @@ async def quotes(message):
             query = requests.get(
                 f"https://animechan.vercel.app/api/random/anime?title={title}"
             ).json()
-            response = f"{query['quote']} ({query['character']})"
+            anime, character, quote = query.values()
+            response = f"{quote} ({character}, {anime})"
             await message.channel.send(response)
         except Exception:
             await message.channel.send(
-                "I couldnt find a quote from this anime. Try checking your spelling."
+                "I couldnt find a quote from this anime."
             )
 
     if message.content.startswith("!ayame quote -c $"):
@@ -32,9 +34,10 @@ async def quotes(message):
             query = requests.get(
                 f"https://animechan.vercel.app/api/random/character?name={char}"
             ).json()
-            response = f"{query['quote']} ({query['character']}, {query['anime']})"
+            anime, character, quote = query.values()
+            response = f"{quote} ({character}, {anime})"
             await message.channel.send(response)
         except Exception:
             await message.channel.send(
-                "I couldnt find a quote of that character. Try checking your spelling."
+                "I couldnt find a quote of that character."
             )

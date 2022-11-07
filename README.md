@@ -7,7 +7,9 @@ Quotes: [Animechan](https://animechan.vercel.app)
 
 
 
-### Commands
+## Commands
+
+### Quote functionality
 
 #### !ayame quote -r
 Ayame-chan will get you a random anime quote as well as tell you which character and anime it's from. The channel has to be called **ayame-quote** for this command to trigger.
@@ -17,3 +19,9 @@ Ayame-chan will get you a random character quote from the anime you specified af
 
 #### !ayame quote -c $"character name"
 Ayame-chan will get you a random character quote from the character you specified after the _$_ sign. In case of misspelling or the character not existing she will tell you she didn't find anything. **(no exclamation marks needed for the title)**
+
+
+### Search anime per picture
+
+
+### Reactions
