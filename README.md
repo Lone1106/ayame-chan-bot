@@ -4,10 +4,30 @@ Ayame-chan is a discord bot that will help with your anime desires. She will use
 
 ### Used APIS
 Quotes: [Animechan](https://animechan.vercel.app)
+Search anime per picture: [trace.moe](https://soruly.github.io/trace.moe-api/#/)
 
+### Requirements
+- channel named ayame-quote
+- channel named ayame-search
 
 
 ## Commands
+
+### Help
+- !help -> gets you basic help overview
+- !help channel -> gives you info about what you can do in the channel
+- !help reactions -> shows all of the current reactions
+
+### Reactions
+Write one of the following commands in any channel and ayame will give you a fitting reaction.
+- !ayame dance
+- !ayame yo
+- !ayame cool
+- !ayame swarm
+- !ayame idol
+- !ayame angry
+- !ayame wondering
+
 
 ### Quote functionality
 
@@ -22,6 +42,5 @@ Ayame-chan will get you a random character quote from the character you specifie
 
 
 ### Search anime per picture
+Send a image link or upload a image file to the **ayame-search** channel and ayame will search the anime for you. **No prefixes needed, only image file or link*
 
-
-### Reactions

@@ -3,6 +3,9 @@ import os
 import discord
 
 from quotes.quotes import quotes
+from reactions.reactions import reactions
+from reactions.help_me import help_me
+from search.search import search
 
 load_dotenv()
 
@@ -26,6 +29,12 @@ def run_ayame():
 
         if message.channel.name == "ayame-quote":
             await quotes(message)
+
+        if message.channel.name == "ayame-search":
+            await search(message)
+
+        await reactions(message)
+        await help_me(message)
 
     @client.event
     async def on_member_join(member):

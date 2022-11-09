@@ -3,7 +3,9 @@ import requests
 
 async def quotes(message):
 
-    if message.content.startswith("!ayame quote -r"):
+    question = message.content.strip()
+
+    if question.startswith("!ayame quote -r"):
         try:
             query = requests.get(
                 "https://animechan.vercel.app/api/random").json()
@@ -14,9 +16,9 @@ async def quotes(message):
             await message.channel.send(
                 "I couldnt find a quote right now. Maybe try again later.")
 
-    if message.content.startswith("!ayame quote -a $"):
+    if question.startswith("!ayame quote -a $"):
         try:
-            title = message.content.split("$")[1].lower()
+            title = message.content.split(" ")[1].lower()
             query = requests.get(
                 f"https://animechan.vercel.app/api/random/anime?title={title}"
             ).json()
@@ -25,10 +27,9 @@ async def quotes(message):
             await message.channel.send(response)
         except Exception:
             await message.channel.send(
-                "I couldnt find a quote from this anime."
-            )
+                "I couldnt find a quote from this anime.")
 
-    if message.content.startswith("!ayame quote -c $"):
+    if question.startswith("!ayame quote -c $"):
         try:
             char = message.content.split("$")[1].lower()
             query = requests.get(
@@ -39,5 +40,4 @@ async def quotes(message):
             await message.channel.send(response)
         except Exception:
             await message.channel.send(
-                "I couldnt find a quote of that character."
-            )
+                "I couldnt find a quote of that character.")
