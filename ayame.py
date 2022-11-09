@@ -36,9 +36,4 @@ def run_ayame():
         await reactions(message)
         await help_me(message)
 
-    @client.event
-    async def on_member_join(member):
-        channel = client.get_channel(os.getenv("WELCOME_CHANNEL"))
-        await channel.send(f"<@{member.id}> Konnakkiri!!")
-
     client.run(os.getenv("TOKEN"))

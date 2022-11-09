@@ -2,8 +2,11 @@
 
 Ayame-chan is a discord bot that will help with your anime desires. She will use some apis to quote characters for you, search animes based on images as well as recommend new animes to you.
 
+[Invite Link](https://discord.com/api/oauth2/authorize?client_id=1038809073652609145&permissions=534723950656&scope=bot)
+
 ### Used APIS
 Quotes: [Animechan](https://animechan.vercel.app)
+
 Search anime per picture: [trace.moe](https://soruly.github.io/trace.moe-api/#/)
 
 ### Requirements
@@ -42,5 +45,5 @@ Ayame-chan will get you a random character quote from the character you specifie
 
 
 ### Search anime per picture
-Send a image link or upload a image file to the **ayame-search** channel and ayame will search the anime for you. **No prefixes needed, only image file or link*
+Send a image link or upload a image file to the **ayame-search** channel and ayame will search the anime for you. **No prefixes needed, only image file or link**
 
