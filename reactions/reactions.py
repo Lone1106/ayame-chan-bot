@@ -41,3 +41,13 @@ async def reactions(message):
         await message.channel.send(
             "https://tenor.com/view/hololive-%E3%83%9B%E3%83%AD%E3%83%A9%E3%82%A4%E3%83%96-hologra-%E3%83%9B%E3%83%AD%E3%81%90%E3%82%89-nakiri-ayame-gif-23864462"
         )
+
+    if query == "!ayame want":
+        await message.channel.send(
+            "https://tenor.com/view/ayame-nakiri-ayame-hololive-gif-21402823https://tenor.com/view/ayame-nakiri-ayame-hololive-gif-21402823"
+        )
+
+    if query == "!ayame blink":
+        await message.channel.send(
+            "https://tenor.com/view/nakiriayame-ayame-ayamelfr-lfrhahaha-gif-19358266"
+        )

@@ -1,33 +1,40 @@
 import requests
 import urllib.parse
 
-img_str = ""
 
+async def get_data(msg):
 
-async def get_data(message):
+    img_str = ""
 
-    global img_str
-
-    if message.attachments:
-        img = message.attachments[0]
+    if msg.attachments:
+        img = msg.attachments[0]
         img_str = str(img)
 
-    if not message.attachments:
-        img = message.content.strip()
+    if not msg.attachments:
+        img = msg.content.strip().split("$")[1]
         img_str = img
 
+    return img_str
 
-async def search(msg):
-    try:
-        await get_data(msg)
 
-        query = requests.get("https://api.trace.moe/search?url={}".format(
-            urllib.parse.quote_plus(img_str))).json()
+async def search(message):
+    msg_content = message.content.strip()
 
-        # Format request
-        # Send answer as chat message
-        print(query)
+    if msg_content.startswith("!ayame search"):
 
-    except Exception:
-        await msg.channel.send(
-            "I couldn't find anything. Maybe try a different image?")
+        await message.channel.send("Yo Yo, I'm on it 人間!")
+
+        try:
+            search_data = await get_data(message)
+
+            query = requests.get("https://api.trace.moe/search?url={}".format(
+                urllib.parse.quote_plus(search_data))).json()
+
+            response = query["result"][0]["filename"].replace(
+                "]", "_").replace("(", "_").split("_")[1]
+
+            await message.channel.send(response)
+
+        except Exception:
+            await message.channel.send(
+                "Hmmm hmm hmm, I couldn't find anything 人間.")
