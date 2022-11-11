@@ -9,9 +9,13 @@ Quotes: [Animechan](https://animechan.vercel.app)
 
 Search anime per picture: [trace.moe](https://soruly.github.io/trace.moe-api/#/)
 
+Waifus: [waifu.pics](https://waifu.pics/)
+
 ### Requirements
 - channel named ayame-quote
 - channel named ayame-search
+- channel named ayame-waifu
+- channel named ayame-recommend
 
 
 ## Commands
@@ -49,5 +53,16 @@ Ayame-chan will try to get you a random character quote from the character you s
 ### Search anime per picture
 In case you upload an image to the channel please add **!ayame search** into the message field.
 If you want to use a link to an image please prefix the link with **!ayame search $"LINK"** _(please dont put quotations around the link)_
-After doing so ayame will reply to you with the anime and episode number or tell you she didnt find anything
+After doing so ayame will reply to you with the anime and episode number or tell you she didnt find anything.
+
+
+### Anime Waifu Images and GIF
+Type **!ayame waifu** into the ayame-waifus channel and I will send you a SFW image or gif of a random anime waifu out of preset categories.
+
+
+### Anime recommendations
+Write one of the following comands into the ayame-recommend channel.
+
+#### Trending anime
+Type !ayame trending to get info of the latest trending anime (Name, ID, average Rating, Synopsis)
 

@@ -22,8 +22,6 @@ async def search(message):
 
     if msg_content.startswith("!ayame search"):
 
-        await message.channel.send("Yo Yo, I'm on it 人間!")
-
         try:
             search_data = await get_data(message)
 

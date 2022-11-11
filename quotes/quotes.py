@@ -7,7 +7,6 @@ async def quotes(message):
     question = message.content.strip()
 
     if question.startswith("!ayame quote -r"):
-        await message.channel.send("Hmmm let me think...")
         try:
             query = requests.get(
                 "https://animechan.vercel.app/api/random").json()
@@ -18,7 +17,6 @@ async def quotes(message):
             await message.channel.send(error_msg)
 
     if question.startswith("!ayame quote -a $"):
-        await message.channel.send("Hmmm let me think...")
         try:
             title = message.content.split("$")[1].lower()
             query = requests.get(
@@ -31,7 +29,6 @@ async def quotes(message):
             await message.channel.send(error_msg)
 
     if question.startswith("!ayame quote -c $"):
-        await message.channel.send("Hmmm let me think...")
         try:
             char = message.content.split("$")[1].lower()
             query = requests.get(

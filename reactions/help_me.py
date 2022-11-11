@@ -18,6 +18,16 @@ async def help_me(message):
             "Upload an image to the channel or link an image and I will search the anime and episode for you! If you use a link please perfix it with !ayame search $'LINK'. If you upload an image to the channel put !ayame search into the message of the image."
         )
 
+    if m == "!ayame channel" and c == "ayame-waifus":
+        await message.channel.send(
+            "Type **!ayame waifu** into the ayame-waifus channel and I will send you a SFW image or gif of a random anime waifu out of preset categories."
+        )
+
+    if m == "!ayame channel" and c == "ayame-recommend":
+        await message.channel.send(
+            "(Type !ayame trending to get info of the latest trending anime from me!)"
+        )
+
     if m == "!ayame reactions":
         await message.channel.send(
             "To make me react please write !ayame [reaction].All of my current reactions are dance, yo, cool, swarm, idol, angry, wondering, want, blink."
