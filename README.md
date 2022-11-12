@@ -40,7 +40,7 @@ Write one of the following commands in any channel and ayame will react!
 
 ### Quote functionality
 
-#### !ayame quote -r
+#### !ayame quote
 Ayame-chan will try to get you a random anime quote as well as tell you which character and anime it's from. The channel has to be called **ayame-quote** for this command to trigger.
 
 #### !ayame quote -a $"anime name"

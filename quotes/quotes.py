@@ -6,7 +6,7 @@ async def quotes(message):
     error_msg = "Hmmm hmm hmm, I couldn't remember anything at the moment 人間."
     question = message.content.strip()
 
-    if question.startswith("!ayame quote -r"):
+    if question == "!ayame quote":
         try:
             query = requests.get(
                 "https://animechan.vercel.app/api/random").json()

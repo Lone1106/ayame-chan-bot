@@ -10,7 +10,7 @@ async def help_me(message):
 
     if m == "!ayame channel" and c == "ayame-quote":
         await message.channel.send(
-            "This is my quote channel. Write one of the following commands to get a anime quote from me. !ayame quote -r for a random quote, !ayame quote -a [anime name] for a random quote from an anime, !ayame quote -c [character name] for a random quote from your character. (Please dont use square brackets when you write!)"
+            "This is my quote channel. Write one of the following commands to get a anime quote from me. !ayame quote for a random quote, !ayame quote -a $[anime name] for a random quote from an anime, !ayame quote -c $[character name] for a random quote from your character. (Please dont use square brackets when you write!)"
         )
 
     if m == "!ayame channel" and c == "ayame-search":
