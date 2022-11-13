@@ -21,8 +21,7 @@ async def get_recommend(message):
                 f"Title: {title} \nID: {anime_id} \naverage Rating: {rating} \nSynopsis: {desc}\n {cover}"
             )
 
-        except Exception as e:
-            print(e)
+        except Exception:
             await message.channel.send(
                 "Hmmm hmm hmm, I couldn't find anything 人間.")
 
