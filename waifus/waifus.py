@@ -16,7 +16,7 @@ async def get_waifus(message):
             "cringe"
         ]
 
-        rand = random.randint(0, len(types))
+        rand = random.randint(0, len(types) - 1)
 
         choice = types[rand]
 
