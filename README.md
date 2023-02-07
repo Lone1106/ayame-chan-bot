@@ -1,4 +1,4 @@
-# Ayame-chan discord bot
+# Ayame-chan discord bot (offline)
 
 ## Feature overview
 - get anime quotes
@@ -31,8 +31,3 @@ _Works in all channels_
 #### !ayame channel
 Ayame will give you specific info about the channel you are in and how to use it.
 _Works only in ayames channels_
-
-
-***
-
-### [Invite Ayame-chan here!](https://discord.com/api/oauth2/authorize?client_id=1038809073652609145&permissions=534723950656&scope=bot)
